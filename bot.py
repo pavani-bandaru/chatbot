@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 API_KEY = "AIzaSyA2XYTLxP5QV1BpvYbJE1OE9aD3cyiihc0"
 genai.configure(api_key=API_KEY)
-model = geneai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 if "chat" not in st.session_state:
   st.session_state.chat = model.start_chat(history=[])
